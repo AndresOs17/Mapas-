@@ -1,20 +1,76 @@
-
 def new_map():
   map = {
     "size":0,
-    "table":[]
+    "table": []
     "type": "LISTA_ORDENADA"}
 
   return map
 
+
+def new_map_entry(key, value):
+
+    entry = {"key": key, "value": value}
+
+    return entry
+
+
+def get_key(entry):
+
+    return entry["key"]
+
+def get_value(entry):
+
+    return entry["value"]
+
+
 def size(my_map):
+
   return my_map["size"]
+
 
 def is_empty(my_map):
 
   is_cero = size(my_map) == 0 
   return is_cero
 
-def get_value(entry):
 
-def set_key(entry, )
+
+
+
+
+def put(my_map, key. value):
+
+##TODO
+
+
+def get(my_map,key):
+
+    ordered_list = my_amp["table"]
+    result = binary_search(ordered_list, key)
+
+    ##si retorna -1, retornar None
+
+    if result == -1:
+        return None
+    
+    return get_value(ordered_list[result])
+
+
+
+
+def binary_search(entries,key):
+    left = 0
+    right = size(entries)-1
+
+    while left <= right:
+        middle = (left + right) // 2
+        middle_key = entries[middle]["key"]
+
+        if middle_key == key:
+            return middle
+        if middle_key < key:
+            left = middle + 1
+        else:
+            right = middle - 1
+    
+    return -1
