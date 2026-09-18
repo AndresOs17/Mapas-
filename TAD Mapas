@@ -1,0 +1,20 @@
+
+def new_map():
+  map = {
+    "size":0,
+    "table":[]
+    "type": "LISTA_ORDENADA"}
+
+  return map
+
+def size(my_map):
+  return my_map["size"]
+
+def is_empty(my_map):
+
+  is_cero = size(my_map) == 0 
+  return is_cero
+
+def get_value(entry):
+
+def set_key(entry, )
